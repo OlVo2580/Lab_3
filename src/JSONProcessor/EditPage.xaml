@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JSONProcessor.EditPage">
+
+    <ScrollView>
+        <Grid x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Text="Title"/>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Text="Edition"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Text="Author"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Text="Annotation"/>
+
+        <Entry WidthRequest="600" x:Name="EntryForTitle" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+        <Entry WidthRequest="600" x:Name="EntryForEdition" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+        <Entry WidthRequest="600" x:Name="EntryForAuthor" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
+        <Entry WidthRequest="600" x:Name="EntryForAnnotation" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
+
+        <HorizontalStackLayout Grid.Row="4"
+        Grid.Column="0"
+        Grid.ColumnSpan="2"
+        Spacing="5">
+
+            <Button
+            Text="Apply"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            BackgroundColor="Black"
+            TextColor="White"
+            Clicked="On_Apply"
+            />
+
+        </HorizontalStackLayout>
+
+        </Grid>   
+    </ScrollView>
+
+</ContentPage>

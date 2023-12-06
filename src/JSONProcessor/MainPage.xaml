@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JSONProcessor.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>      
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Padding="10"
+                Spacing="40">
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Open"
+                    Clicked="On_Open" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Find"
+                    Clicked="On_Find" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Clear"
+                    Clicked="On_Clear" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Delete Filters"
+                    Clicked="On_DeleteFilters" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Save"
+                    Clicked="On_Save" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Add"
+                    Clicked="On_Add" />
+                
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Info"
+                    Clicked="On_Info" />
+
+                <Button BackgroundColor="Black" TextColor="White"
+                    Text="Exit"
+                    Clicked="On_Exit" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox
+                    x:Name="CheckboxForTitle"
+                    CheckedChanged="On_FilterChanged"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Title" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="EntryForTitle"
+                    Placeholder="Enter book title here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                Spacing="5">
+
+                <CheckBox
+                    x:Name="CheckboxForAnnotation"
+                    CheckedChanged="On_FilterChanged"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Annotation" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="EntryForAnnotation"
+                    Placeholder="Enter book Annotation here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Spacing="5">
+
+                <CheckBox
+                    x:Name="CheckboxForAuthor"
+                    CheckedChanged="On_FilterChanged"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Author" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="EntryForAuthor"
+                    Placeholder="Enter book author here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                Spacing="5">
+
+                <CheckBox
+                    x:Name="CheckboxForEdition"
+                    CheckedChanged="On_FilterChanged"
+                     />
+                
+                <Label 
+                    WidthRequest="80"
+                    Text="Edition" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+                
+                <Entry 
+                    x:Name="EntryForEdition"
+                    Placeholder="Enter book Edition here"
+                    WidthRequest="200" />
+
+            </HorizontalStackLayout>
+
+            <Grid
+                x:Name="GridForSearchResults"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Padding="0, 10, 0, 0" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Title" />
+
+                <Label Grid.Row="0"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Author" />
+
+                <Label Grid.Row="0"
+                Grid.Column="2"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Edition" />
+
+                <Label Grid.Row="0"
+                Grid.Column="3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Annotation" />
+
+            </Grid>
+
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>
